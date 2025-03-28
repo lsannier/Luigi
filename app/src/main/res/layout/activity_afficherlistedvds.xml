@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ListView
+        android:id="@+id/listeDvds"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#FFFFFF"
+        android:textColor="#000000"
+        app:layout_constraintHeight_percent="0.7"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="64dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/buttonAjouter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="Ajouter"
+        android:textSize="20sp"
+        android:backgroundTint="#FF5722"
+        android:textColor="#FFFFFF"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/buttonPanier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Voir le panier"
+        android:textSize="20sp"
+        android:backgroundTint="#3F51B5"
+        android:textColor="#FFFFFF"
+        tools:ignore="MissingConstraints"
+        android:onClick="openCart" />
+</androidx.constraintlayout.widget.ConstraintLayout>
