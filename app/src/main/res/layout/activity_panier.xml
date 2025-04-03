@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F4C3">
+
+    <!-- En-tête du panier -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/headerPanier"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#43A047"
+        app:cardElevation="4dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/txtPanier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🛒 Votre panier"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:id="@+id/txtPanierInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vérifiez vos articles avant de valider"
+                android:textSize="14sp"
+                android:textColor="@android:color/white"
+                android:alpha="0.8"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Récapitulatif du panier -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardResume"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/headerPanier">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Total des articles :"
+                android:textSize="16sp"
+                android:textColor="#2E7D32"/>
+
+            <TextView
+                android:id="@+id/txtTotalItems"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 DVD"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#2E7D32"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Liste des articles du panier -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/panier_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        android:paddingBottom="16dp"
+        android:clipToPadding="false"
+        app:layout_constraintTop_toBottomOf="@id/cardResume"
+        app:layout_constraintBottom_toTopOf="@id/buttonContainer"/>
+
+    <!-- Boutons de contrôle -->
+    <LinearLayout
+        android:id="@+id/buttonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:id="@+id/button_continuer_shopping"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:text="Continuer"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#689F38"/>
+
+        <Button
+            android:id="@+id/button_valider_panier"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Valider le panier"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#43A047"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

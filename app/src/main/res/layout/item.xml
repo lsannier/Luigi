@@ -1,0 +1,65 @@
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/texteTitleId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="titre"
+            android:gravity="center"
+            android:padding="2dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/texteReleaseYearId" />
+
+        <TextView
+            android:id="@+id/texteReleaseYearId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="année"
+            android:gravity="center"
+            android:padding="2dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            app:layout_constraintStart_toEndOf="@+id/texteTitleId"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/texteLanguageId" />
+
+        <TextView
+            android:id="@+id/texteLanguageId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="langue"
+            android:gravity="center"
+            android:padding="2dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            app:layout_constraintStart_toEndOf="@+id/texteReleaseYearId"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/texteDureeId" />
+
+        <TextView
+            android:id="@+id/texteDureeId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="durée"
+            android:gravity="center"
+            android:padding="2dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            app:layout_constraintStart_toEndOf="@+id/texteLanguageId"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

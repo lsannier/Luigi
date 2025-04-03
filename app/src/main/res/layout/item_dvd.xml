@@ -1,28 +1,78 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:layout_marginBottom="16dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="4dp">
 
-    <TextView
-        android:id="@+id/titleTextView"
-        android:layout_width="267dp"
-        android:layout_height="40dp"
-        android:layout_marginBottom="8dp"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:translationX="25px" />
-
-    <TextView
-        android:id="@+id/descriptionTextView"
-        android:layout_width="360dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ellipsize="end"
-        android:maxLines="2"
-        android:textColor="#333333"
-        android:textSize="14sp"
-        android:translationX="25px" />
+        android:orientation="horizontal">
 
-</LinearLayout> 
+        <!-- Image du film (à définir dans le code) -->
+        <ImageView
+            android:id="@+id/dvdImage"
+            android:layout_width="120dp"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            android:src="@android:drawable/ic_menu_gallery"
+            android:background="#ECECEC"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Titre du film -->
+            <TextView
+                android:id="@+id/dvdTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nom du film"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#2E7D32"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:paddingBottom="4dp"/>
+
+            <!-- Année de sortie -->
+            <TextView
+                android:id="@+id/dvdAvailability"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2006"
+                android:textSize="14sp"
+                android:textColor="#689F38"
+                android:layout_marginBottom="6dp"/>
+
+            <!-- Début de la description -->
+            <TextView
+                android:id="@+id/dvdDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Début de la description..."
+                android:textSize="14sp"
+                android:textColor="#2E7D32"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:paddingBottom="8dp"/>
+
+            <!-- Bouton Ajouter au panier -->
+            <Button
+                android:id="@+id/btnAddToCart"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:padding="8dp"
+                android:text="🛒 Ajouter"
+                android:textColor="@android:color/white"
+                android:backgroundTint="#43A047"
+                android:textSize="12sp"
+                app:cornerRadius="20dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

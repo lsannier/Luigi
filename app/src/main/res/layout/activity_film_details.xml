@@ -1,0 +1,66 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="12dp"
+    android:layout_margin="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Film Poster -->
+        <ImageView
+            android:id="@+id/filmPoster"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/dvd"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Film Title -->
+        <TextView
+            android:id="@+id/filmTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Titre du film"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#2E7D32"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Release Year -->
+        <TextView
+            android:id="@+id/releaseYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Année de sortie"
+            android:textSize="16sp"
+            android:textColor="#689F38"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Film Description -->
+        <TextView
+            android:id="@+id/filmDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Description"
+            android:textSize="18sp"
+            android:textColor="#2E7D32"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Rating -->
+        <TextView
+            android:id="@+id/rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Note"
+            android:textSize="18sp"
+            android:textColor="#43A047"/>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
